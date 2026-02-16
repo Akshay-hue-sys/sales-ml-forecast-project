@@ -1,0 +1,45 @@
+Dataset shape after 5% outlier removal: (9494, 28)
+RandomForest completed.
+GradientBoosting completed.
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001347 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 993
+[LightGBM] [Info] Number of data points in the train set: 5063, number of used features: 135
+[LightGBM] [Info] Start training from score 169.890173
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000833 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 990
+[LightGBM] [Info] Number of data points in the train set: 5063, number of used features: 134
+[LightGBM] [Info] Start training from score 162.250185
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000999 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 996
+[LightGBM] [Info] Number of data points in the train set: 5064, number of used features: 137
+[LightGBM] [Info] Start training from score 163.684256
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.003042 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1232
+[LightGBM] [Info] Number of data points in the train set: 7595, number of used features: 252
+[LightGBM] [Info] Start training from score 165.274766
+LightGBM completed.
+XGBoost completed.
+
+Model Comparison:
+              Model  CV_R2_Mean  CV_R2_Std   Test_R2       RMSE
+2          LightGBM    0.961016   0.006725  0.963893  48.420162
+0      RandomForest    0.953383   0.002780  0.958277  52.049997
+3           XGBoost    0.950685   0.001329  0.943730  60.446594
+1  GradientBoosting    0.896216   0.008372  0.891373  83.985223
+
+==============================
+🏆 BEST MODEL
+==============================
+Model Name  : LightGBM
+CV R2 Mean  : 0.9610
+Test R2     : 0.9639
+RMSE        : 48.4202
+==============================
