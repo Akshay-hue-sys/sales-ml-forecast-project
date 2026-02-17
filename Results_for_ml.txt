@@ -1,25 +1,27 @@
 Dataset shape after 5% outlier removal: (9494, 28)
+NaiveMean completed.
+DecisionTree completed.
 RandomForest completed.
 GradientBoosting completed.
-[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001347 seconds.
+AdaBoost completed.
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.003142 seconds.
 You can set `force_row_wise=true` to remove the overhead.
 And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Total Bins 993
 [LightGBM] [Info] Number of data points in the train set: 5063, number of used features: 135
 [LightGBM] [Info] Start training from score 169.890173
-[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000833 seconds.
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001680 seconds.
 You can set `force_row_wise=true` to remove the overhead.
 And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Total Bins 990
 [LightGBM] [Info] Number of data points in the train set: 5063, number of used features: 134
 [LightGBM] [Info] Start training from score 162.250185
-[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000999 seconds.
-You can set `force_row_wise=true` to remove the overhead.
-And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002176 seconds.
+You can set `force_col_wise=true` to remove the overhead.
 [LightGBM] [Info] Total Bins 996
 [LightGBM] [Info] Number of data points in the train set: 5064, number of used features: 137
 [LightGBM] [Info] Start training from score 163.684256
-[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.003042 seconds.
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.007083 seconds.
 You can set `force_row_wise=true` to remove the overhead.
 And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Total Bins 1232
@@ -27,19 +29,24 @@ And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Start training from score 165.274766
 LightGBM completed.
 XGBoost completed.
+SVR completed.
 
 Model Comparison:
-              Model  CV_R2_Mean  CV_R2_Std   Test_R2       RMSE
-2          LightGBM    0.961016   0.006725  0.963893  48.420162
-0      RandomForest    0.953383   0.002780  0.958277  52.049997
-3           XGBoost    0.950685   0.001329  0.943730  60.446594
-1  GradientBoosting    0.896216   0.008372  0.891373  83.985223
+              Model  CV_R2_Mean  CV_R2_Std   Test_R2        RMSE
+5          LightGBM    0.965644   0.005731  0.967225   46.132372
+6           XGBoost    0.957305   0.001125  0.952069   55.788197
+2      RandomForest    0.953884   0.003095  0.958482   51.922201
+3  GradientBoosting    0.914666   0.008675  0.908131   77.235517
+1      DecisionTree    0.846819   0.010942  0.840186  101.868578
+4          AdaBoost    0.734260   0.018761  0.732882  131.699682
+7               SVR    0.348494   0.021080  0.396984  197.877984
+0         NaiveMean   -0.001602   0.001195 -0.000005  254.820329
 
 ==============================
 🏆 BEST MODEL
 ==============================
 Model Name  : LightGBM
-CV R2 Mean  : 0.9610
-Test R2     : 0.9639
-RMSE        : 48.4202
+CV R2 Mean  : 0.9656
+Test R2     : 0.9672
+RMSE        : 46.1324
 ==============================

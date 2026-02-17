@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+app/.ipynb_checkpoints/
+__pycache__/
+*.pyc
+streamlit
